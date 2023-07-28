@@ -17,6 +17,7 @@ module.exports = {
         'neon-violet': '#E15FED',
         'neon-pink': '#FA58B6',
         'neon-teal': '#6EDCD9',
+        'neon-yellow': '#FDE047'
       }
     },
   },
