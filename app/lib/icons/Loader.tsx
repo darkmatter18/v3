@@ -1,6 +1,4 @@
-import React from 'react';
 import clsx from 'clsx';
-import PropTypes from 'prop-types';
 
 interface IconLoaderProps {
     isOnLoader: boolean;
@@ -29,10 +27,6 @@ const IconLoader = ({isOnLoader}: IconLoaderProps) => (
       className={'stroke-current text-neon-violet'} strokeWidth="10"/>
   </svg>
 );
-
-IconLoader.propTypes = {
-  isOnLoader: PropTypes.bool.isRequired,
-};
 
 
 export default IconLoader;
