@@ -27,11 +27,6 @@ export default function Loading({finishComplete}: LoadingProps) {
           easing: 'easeInOutQuart',
           opacity: 1,
         })
-        .add(createDrawable('#logo #B'), {
-          duration: 700,
-          easing: 'easeInOutQuart',
-          opacity: 1,
-        })
         .add(createDrawable('#title_container'), {
           duration: 1000,
           easing: 'easeOutCubic',
