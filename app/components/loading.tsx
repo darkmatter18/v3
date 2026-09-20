@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react';
-import anime from 'animejs';
+import { createDrawable, createTimeline } from 'animejs';
 import clsx from 'clsx';
 import IconLoader from '@/app/lib/icons/Loader'
 
@@ -11,45 +11,39 @@ interface LoadingProps {
 
 export default function Loading({finishComplete}: LoadingProps) {
   const animate = () => {
-    const loader = anime.timeline({
-      complete: () => finishComplete(),
+    const loader = createTimeline({
+      onComplete: () => finishComplete(),
     });
 
     loader
-        .add({
-          targets: '#logo path',
+        .add(createDrawable('#logo path'), {
           delay: 300,
           duration: 1500,
           easing: 'easeInOutQuart',
-          strokeDashoffset: [anime.setDashoffset, 0],
+          draw: '0 1'
         })
-        .add({
-          targets: '#logo #A',
+        .add(createDrawable('#logo #A'), {
           duration: 700,
           easing: 'easeInOutQuart',
           opacity: 1,
         })
-        .add({
-          targets: '#logo #B',
+        .add(createDrawable('#logo #B'), {
           duration: 700,
           easing: 'easeInOutQuart',
           opacity: 1,
         })
-        .add({
-          targets: '#title_container',
+        .add(createDrawable('#title_container'), {
           duration: 1000,
           easing: 'easeOutCubic',
           scale: 0,
         })
-        .add({
-          targets: '#title_container',
+        .add(createDrawable('#title_container'), {
           duration: 1000,
           easing: 'easeInOutExpo',
           width: 0,
           height: 0,
         })
-        .add({
-          targets: '#logo',
+        .add(createDrawable('#logo'), {
           duration: 500,
           easing: 'easeOutQuart',
           opacity: 0,
