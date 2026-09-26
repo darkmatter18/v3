@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: 'Arkadip',
     statusBarStyle: 'black-translucent'
   },
-  applicationName: "Portfolio | Arkadip",
+  applicationName: "Arkadip",
   authors: {
     name: "Arkadip Bhattacharya",
     url: "https://github.com/darkmatter18"
